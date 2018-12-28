@@ -15,7 +15,7 @@ int main()
 {
 
     std::cout << "\033[31mHey, press w to go up and enter to submit, arrow keys broke\ndw, if you reach first option and press w, it'll go back down\ncurrently down scroll broke so yeah F\033[0m\n";
-    std::string woahbro[3] = {"1. text 1\n", "2. sample text 2\n", "3. lorem ipsum\n"};
+    std::string woahbro[3] = {"1. Option 1\n", "2. Option 2\n", "3. Option 3\n"};
     for(int i = 0; i <= 2; ++i)
     {
         if(i != 2)
@@ -53,7 +53,25 @@ int main()
                 //cerebral palsy
             }
 
-        } else {return 0;}
+        } else if(key == 'S' || key == 's')
+        {
+            if(yeah >= 2)
+            {
+                std::cout << "\x1b[1A\x1b[1A\033[0m" << woahbro[yeah];
+                yeah = yeah - 2;
+                std::cout << "\n\x1b[1A\x1b[1A\x1b[1A\x1b[1A\033[32m" << woahbro[yeah] << "\n\n";
+            } else if(yeah == 1)
+            {
+                std::cout << "\x1b[1A\x1b[1A\x1b[1A\033[0m" << woahbro[yeah];
+                yeah = yeah + 1;
+                std::cout << "\033[32m" << woahbro[yeah];
+            } else if(yeah == 0)
+            {
+                std::cout << "\x1b[1A\x1b[1A\x1b[1A\x1b[1A\033[0m" << woahbro[yeah];
+                yeah = yeah + 1;
+                std::cout << "\033[32m" << woahbro[yeah] << "\n";
+            }
+        }
     }
 
     return 0;

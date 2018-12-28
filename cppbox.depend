@@ -1,0 +1,11 @@
+# depslib dependency file v1.0
+1546020819 source:/home/kaua/Documents/codig/cppbox/main.cpp
+	<iostream>
+	<string>
+	<stdio.h>
+
+1545963746 /home/kaua/Documents/codig/cppbox/yes.h
+	<termios.h>
+	<unistd.h>
+	<stdio.h>
+
